@@ -1,0 +1,49 @@
+/* src/SearchComponent.css */
+.search_container {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  
+    /* Center the container */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 70vh; /* Set container height to 100% of viewport height */
+  }
+
+  .search_container label{
+    margin-left: 10px;
+  }
+  .search_result{
+    display: flex;
+    flex-direction: row;
+    margin-left: 10px;
+  }
+  
+  .search_input {
+    width: 200px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+  }
+  
+  .search_button {
+    padding: 10px;
+    background-color: #4be87f;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  .search_button:hover {
+    background-color: #17ef14;
+  }
+  
+  /* Add more styling as needed */
+  

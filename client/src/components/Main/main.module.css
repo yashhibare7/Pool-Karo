@@ -1,0 +1,189 @@
+body {
+    overflow-x: hidden;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.left_part{
+    flex: 0 0 48%;
+}
+
+.right_part{
+    flex: 0 0 48%;
+}
+
+.img {
+    margin-left: 10px;
+    margin-top: 15px;
+    height: 500px;
+}
+
+.info{
+    display: flex;
+}
+
+.slodgen{
+    width: 50px;
+}
+
+.white_btn {
+    border: none;
+    outline: none;
+    padding: 12px 0;
+    background-color: rgb(21, 189, 72);
+    border-radius: 20px;
+    width: 100px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    margin-left: 40px;
+    margin-right: 20px;
+}
+
+.links a, .links button {
+    color: white;
+    text-decoration: none;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+
+  .links button:hover {
+    text-decoration: underline;
+  }
+  
+
+
+  /* Benefits section*/
+.benefit_title{
+    text-align: center;
+}
+
+.benefits {
+    padding: 2rem;
+    border-radius: 6px;
+    width: 100%;
+    background-color: #6fc779;
+    box-shadow: 0 2px 8px rgba(78, 74, 74, 0.4);
+  }
+  
+  main h2 {
+    text-align: center;
+    font-family: "Roboto Condensed", sans-serif;
+    margin: 0 0 1.5rem 0;
+    color: #a18aba;
+  }
+  
+  .benefits ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .benefits li {
+    width: 10rem;
+    text-align: center;
+  }
+  
+  .benefits li img {
+    height: 6rem;
+    width: 6rem;
+    object-fit: cover;
+  }
+  
+  .benefits li h3 {
+    margin: 0.5rem 0;
+  }
+  
+  .benefits li p {
+    font-size: 0.9rem;
+  }
+
+  /* question section*/
+
+.question_title{
+    text-align: center;
+}
+
+/* main.module.css */
+
+.question {
+    margin-top: 40px; /* Adjust spacing as needed */
+  }
+  
+  ol {
+    list-style-type: decimal; /* Use decimal numbering for ordered list */
+  }
+  
+  li {
+    margin-bottom: 20px; /* Adjust spacing between each question and answer */
+  }
+  
+  .question h3 {
+    color: #4ae676; /* Adjust question color */
+    font-size: 18px;
+    margin-bottom: 10px; /* Adjust spacing between question and answer */
+  }
+  
+  .question p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.5; /* Adjust line height for better readability */
+  }
+
+  /* main.module.css */
+
+.footer {
+    background-color: #666; /* Adjust background color */
+    color: #fff; /* Adjust text color */
+    padding: 40px 0;
+  }
+  
+  .footerContent {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .footerColumn {
+    flex: 0 0 calc(25% - 20px);
+    margin-bottom: 20px;
+  }
+  
+  .footer h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .footer p {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  
+  .footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer li {
+    margin-bottom: 5px;
+    cursor: pointer;
+  }
+  
+  .copyright{
+    text-align: center;
+  }
+  /* Add styles for newsletter subscription form or input field if needed */
+  
+  
