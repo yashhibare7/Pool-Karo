@@ -18,7 +18,12 @@
     "joi": "^17.5.0",
     "joi-password-complexity": "^5.1.0",
     "jsonwebtoken": "^8.5.1",
+<<<<<<< HEAD
     "mongoose": "^6.12.6",
     "nodemon": "^2.0.15"
+=======
+    "mongoose": "^6.1.2",
+    "nodemon": "^2.0.22"
+>>>>>>> d9065116646c909e52c9abd29671c10944af86b4
   }
 }
