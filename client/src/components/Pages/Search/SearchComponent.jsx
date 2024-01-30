@@ -6,15 +6,13 @@ import searchcom from './searchcomponent.module.css';
 const SearchComponent = ({ rides }) => {
   const [searchSource, setSearchSource] = useState('');
   const [searchDestination, setSearchDestination] = useState('');
-  const [searchDate, setSearchDate] = useState('');
   const [searchResults, setSearchResults] = useState([]);
 
   const handleSearch = () => {
     const filtered = rides.filter(
       (ride) =>
         ride.source.toLowerCase().includes(searchSource.toLowerCase()) &&
-        ride.destination.toLowerCase().includes(searchDestination.toLowerCase()) &&
-        ride.date.includes(searchDate)
+        ride.destination.toLowerCase().includes(searchDestination.toLowerCase())
     );
     setSearchResults(filtered);
   };
@@ -37,14 +35,6 @@ const SearchComponent = ({ rides }) => {
             type="text"
             value={searchDestination}
             onChange={(e) => setSearchDestination(e.target.value)}
-          />
-        </label>
-        <label>
-          Date:
-          <input
-            type="date"
-            value={searchDate}
-            onChange={(e) => setSearchDate(e.target.value)}
           />
         </label>
         <button className={searchcom.search_button} onClick={handleSearch}>Search</button>
