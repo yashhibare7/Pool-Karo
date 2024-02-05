@@ -20,7 +20,8 @@
   .search_result{
     display: flex;
     flex-direction: row;
-    margin-left: 10px;
+    margin-left: 40px;
+    flex-wrap: nowrap;
   }
   
   .search_input {

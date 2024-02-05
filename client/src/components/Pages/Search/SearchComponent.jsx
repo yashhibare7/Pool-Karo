@@ -19,6 +19,10 @@ const SearchComponent = ({ rides }) => {
     setSearchResults(filtered);
   };
 
+  const handleCloseCard = (rideId) => {
+    setSearchResults((prevResults) => prevResults.filter((ride) => ride._id !== rideId));
+  };
+
   return (
     <div className={searchcom.search_container}>
       <h2>Search Rides</h2>
@@ -51,7 +55,7 @@ const SearchComponent = ({ rides }) => {
       </div>
       <div className={searchcom.search_result}>
       {searchResults.map((ride) => (
-        <RideCard key={ride._id} ride={ride} />
+        <RideCard key={ride._id} ride={ride} onClose={() => handleCloseCard(ride._id)} />
       ))}
       </div>
     </div>

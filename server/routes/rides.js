@@ -3,10 +3,11 @@ const express = require('express');
 const router = express.Router();
 const Ride = require('../models/Ride');
 
+
 // Add a ride
 router.post('/add-ride', async (req, res) => {
   const { source, destination, date, time, vehicleName, ownerName ,phoneNumber, priceRange } = req.body;
-
+  
   try {
     const newRide = new Ride({ source, destination, date, time, vehicleName, ownerName, phoneNumber , priceRange });
     await newRide.save();

@@ -2,7 +2,7 @@
 import React from 'react';
 import ridecard from './ridecard.module.css'
 
-const RideCard = ({ ride }) => {
+const RideCard = ({ ride,onClose }) => {
   return (
     <div className={ridecard.ride_card}>
       <div className={ridecard.ride_details}>
@@ -15,6 +15,9 @@ const RideCard = ({ ride }) => {
         <p><strong>PhoneNumber:</strong>{ride.phoneNumber}</p>
         <p><strong>Price Range:</strong> {ride.priceRange}</p>
       </div>
+      <button className={ridecard.closeButton} onClick={onClose}>
+        Close
+      </button>
     </div>
   );
 };
