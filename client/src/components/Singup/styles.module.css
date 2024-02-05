@@ -22,7 +22,7 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	background-color: rgb(42, 193, 65);
+	background-color: #00B9F1;
 	border-top-left-radius: 10px;
 	border-bottom-left-radius: 10px;
 }
@@ -92,7 +92,43 @@
 }
 
 .green_btn {
-	background-color: rgb(42, 193, 65);
+	background-color:  #00B9F1;
 	color: white;
 	margin: 10px;
+}
+
+/* Responsive styles for mobile */
+
+@media (max-width: 768px) {
+    .signup_form_container {
+        width: 90%;
+        height: auto;
+        flex-direction: column;
+    }
+
+    .left,
+    .right {
+        flex: 1;
+        border-radius: 10px;
+    }
+
+    .input {
+        width: 100%;
+    }
+
+    .green_btn {
+        width: 100%;
+    }
+
+	.white_btn{
+		margin-bottom: 10px;
+	}
+
+    .left h1 {
+        font-size: 30px;
+    }
+
+    .form_container h1 {
+        font-size: 35px;
+    }
 }

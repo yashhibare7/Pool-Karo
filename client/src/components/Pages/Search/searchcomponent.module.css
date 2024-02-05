@@ -33,7 +33,7 @@
   
   .search_button {
     padding: 10px;
-    background-color: #4be87f;
+    background-color:  #00B9F1;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -42,7 +42,7 @@
   }
   
   .search_button:hover {
-    background-color: #17ef14;
+    background-color: #42b9de;
   }
   
   /* Add more styling as needed */

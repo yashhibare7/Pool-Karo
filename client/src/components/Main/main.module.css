@@ -35,7 +35,7 @@ body {
     border: none;
     outline: none;
     padding: 12px 0;
-    background-color: rgb(21, 189, 72);
+    background-color:  #00B9F1;
     border-radius: 20px;
     width: 100px;
     font-weight: bold;
@@ -69,7 +69,7 @@ body {
     padding: 2rem;
     border-radius: 6px;
     width: 100%;
-    background-color: #6fc779;
+    background-color:  #00B9F1;
     box-shadow: 0 2px 8px rgba(78, 74, 74, 0.4);
   }
   
@@ -130,7 +130,7 @@ body {
   }
   
   .question h3 {
-    color: #4ae676; /* Adjust question color */
+    color:  #00B9F1; /* Adjust question color */
     font-size: 18px;
     margin-bottom: 10px; /* Adjust spacing between question and answer */
   }

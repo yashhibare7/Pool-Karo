@@ -8,6 +8,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: #fff;
     transition: transform 0.3s ease-in-out;
+    margin-left: 20px;
   }
   
   .ride_card:hover {
@@ -26,7 +27,7 @@
   }
   
   .ride_details strong {
-    color: #50c203;
+    color:  #00B9F1;
   }
   
   /* Add more styling as needed */

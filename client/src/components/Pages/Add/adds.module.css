@@ -4,7 +4,7 @@
   }
   
 .app  h1 {
-    color: #009688;
+    color:  #00B9F1;
   }
   
 .app  form {
@@ -24,7 +24,7 @@
   }
   
 .app  button {
-    background-color: #009688;
+    background-color:  #00B9F1;
     color: #fff;
     padding: 10px 20px;
     border: none;
@@ -32,5 +32,5 @@
   }
   
 .app  button:hover {
-    background-color: #00796b;
+    background-color:  #00B9F1;
   }
