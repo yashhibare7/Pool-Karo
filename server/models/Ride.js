@@ -10,6 +10,7 @@ const rideSchema = new mongoose.Schema({
   ownerName: String,
   phoneNumber: Number,
   priceRange: String,
+  userId:String,
 });
 
 const Ride = mongoose.model('Ride', rideSchema);
