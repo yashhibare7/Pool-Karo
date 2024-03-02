@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Navbar from "../../Navbar/Navbar";
-import add from "./adds.module.css";
+import add from "./profile.module.css";
 import Add from "../Add/Add"
 import RideCard from "../Search/RideCard";
 
