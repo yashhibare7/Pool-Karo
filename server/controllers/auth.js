@@ -28,11 +28,13 @@ const authController = async (req, res) => {
       return res.status(401).send({ message: "Invalid Email or Password" });
 
     const token = user.generateAuthToken();
-    res.status(200).send({ data: token, message: "logged in successfully" });
+    const userId = user._id;
+    res
+      .status(200)
+      .send({ data: token, id: userId, message: "logged in successfully" });
   } catch (error) {
     res.status(500).send({ message: "Internal Server Error" });
   }
 };
-
 
 module.exports = { authController };

@@ -10,6 +10,7 @@ const addRideController = async (req, res) => {
     ownerName,
     phoneNumber,
     priceRange,
+    userId,
   } = req.body;
 
   try {
@@ -22,6 +23,7 @@ const addRideController = async (req, res) => {
       ownerName,
       phoneNumber,
       priceRange,
+      userId,
     });
     await newRide.save();
     res.status(201).json({ message: "Ride added successfully!" });
@@ -50,4 +52,15 @@ const getAllRideController = async (req, res) => {
   }
 };
 
-module.exports = { addRideController, getRideController, getAllRideController };
+const getRidebyUser = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const rides = await Ride.find({ userId: id });
+    res.json(rides);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: "Server error" });
+  }
+};
+
+module.exports = { addRideController, getRideController, getAllRideController,getRidebyUser };
