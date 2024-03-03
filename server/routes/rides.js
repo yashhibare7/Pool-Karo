@@ -5,6 +5,7 @@ const {
   getRideController,
   getAllRideController,
   getRidebyUser,
+  deleteRidebyId,
 } = require("../controllers/rides");
 const router = express.Router();
 
@@ -17,6 +18,6 @@ router.get("/get-rides", getRideController);
 // Get all rides for display on another web page
 router.get("/get-all-rides", getAllRideController);
 router.get("/get-user-rides/:id", getRidebyUser);
-
+router.delete("/delete-ride/:id", deleteRidebyId);
 
 module.exports = router;

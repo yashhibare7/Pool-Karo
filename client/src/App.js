@@ -4,7 +4,7 @@ import Signup from "./components/Singup";
 import Login from "./components/Login";
 
 import Search from "./components/Pages/Search/Search";
-import Profile from "./components/Pages/Profile/Profile";
+import ProfileComponent from "./components/Pages/Profile";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -17,7 +17,7 @@ function App() {
       <Route path="/signup" exact element={<Signup />} />
       <Route path="/login" exact element={<Login />} />
       <Route path="/" element={<Navigate replace to="/login" />} />
-      <Route path="/Profile" element={<Profile />} />
+      <Route path="/Profile" element={<ProfileComponent />} />
       <Route path="/search" element={<Search />} />
     </Routes>
   );

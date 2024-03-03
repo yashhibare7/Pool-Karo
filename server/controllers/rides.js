@@ -63,4 +63,28 @@ const getRidebyUser = async (req, res) => {
   }
 };
 
-module.exports = { addRideController, getRideController, getAllRideController,getRidebyUser };
+const deleteRidebyId = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const item = await Ride.findById(id);
+
+    if (item) {
+      await Ride.deleteOne({ _id: id }).then(
+        res.status(200).json({ message: "Ride deleted Successfully" })
+      );
+    } else {
+      res.json("Ride id is invalid");
+    }
+  } catch (err) {
+    console.log(err);
+    res.status(500).json({ message: "Server error" });
+  }
+};
+
+module.exports = {
+  addRideController,
+  getRideController,
+  getAllRideController,
+  getRidebyUser,
+  deleteRidebyId
+};

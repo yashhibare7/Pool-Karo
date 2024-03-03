@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import Navbar from "../../Navbar/Navbar";
+import { Row } from "react-bootstrap";
 import add from "./adds.module.css";
-import Add from "../Add/Add"
+import CardRide from "../../Utils/CardRide";
+
 import RideCard from "../Search/RideCard";
 
-const Profile = () => {
+const Profile = (isProfile) => {
   const userId = localStorage.getItem("userId");
-  const [rides, setRides] = useState();
+  const [rides, setRides] = useState([]);
 
   useEffect(async () => {
     try {
@@ -18,28 +19,18 @@ const Profile = () => {
     } catch (error) {
       console.error(error);
     }
-  }, []);
+  }, [isProfile]);
 
-  const handleCloseCard = (rideId) => {};
+  const handleDelete = (rideId) => {console.log(rideId)};
 
   return (
     <div>
-
-      <Navbar />
-
-        <Add/>
       <div className={add.app}>
         <h1>My Rides </h1>
       </div>
-
-      {rides &&
-        rides.map((ride) => (
-          <RideCard
-            key={ride._id}
-            ride={ride}
-            onClose={() => handleCloseCard(ride._id)}
-          />
-        ))}
+      <Row xs={1} md={2} lg={3} className="justify-content-center">
+      {rides && rides.map((ride) => <CardRide key={ride._id} ride={ride} handleDelete={handleDelete}/>)}
+      </Row>
     </div>
   );
 };

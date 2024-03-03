@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import add from './adds.module.css';
+import add from "./adds.module.css";
 import { Container, Row, Col, Button, Form, Stack } from "react-bootstrap";
 
 const Add = () => {
@@ -52,122 +52,123 @@ const Add = () => {
       </div>
       <h1></h1>
       <Container>
-        <form>
-          <Row md={12} className="mb-2">
-            <Col md={6}>
+        <Form>
+          <Row md={12} className="justify-content-center">
+            <Col md={3}>
               {" "}
-              <label>
-                Source:
-                <input
+              <Form.Group>
+                <Form.Label> Source:</Form.Label>
+                <Form.Control
                   type="text"
                   name="source"
-                  value={formData.source} 
+                  value={formData.source}
                   onChange={handleChange}
                   required
                 />
-              </label>
+              </Form.Group>
             </Col>
-            <Col md={6}>
-              <label>
-                Destination:
-                <input
+            <Col md={3}>
+              <Form.Group>
+                <Form.Label> Destination:</Form.Label>
+                <Form.Control
                   type="text"
                   name="destination"
                   value={formData.destination}
                   onChange={handleChange}
                   required
                 />
-              </label>
+              </Form.Group>
             </Col>
           </Row>
-          <Row md={12} className="mb-2">
-            <Col>
-              <label>
-                Date:
-                <input
+          <Row md={12} className="justify-content-center">
+            <Col md={3}>
+              <Form.Group>
+                <Form.Label> Date:</Form.Label>
+                <Form.Control
                   type="date"
                   name="date"
                   value={formData.date}
                   onChange={handleChange}
                   required
                 />
-              </label>
+              </Form.Group>
             </Col>
-            <Col>
+            <Col md={3}>
               {" "}
-              <label>
-                Time:
-                <input
+              <Form.Group>
+                <Form.Label>Time:</Form.Label>
+                <Form.Control
                   type="time"
                   name="time"
                   value={formData.time}
                   onChange={handleChange}
                   required
                 />
-              </label>
+              </Form.Group>
             </Col>
           </Row>
-          <Row md={12} className="mb-2">
-            <Col>
+          <Row md={12} className="justify-content-center">
+            <Col md={3}>
               {" "}
-              <label>
-                Vehicle Name:
-                <input
+              <Form.Group>
+                <Form.Label> Vehicle Name:</Form.Label>
+                <Form.Control
                   type="text"
                   name="vehicleName"
                   value={formData.vehicleName}
                   onChange={handleChange}
                   required
                 />
-              </label>
+              </Form.Group>
             </Col>
-            <Col>
+            <Col md={3}>
               {" "}
-              <label>
-                Owner Name:
-                <input
+              <Form.Group>
+                <Form.Label> Owner Name:</Form.Label>
+                <Form.Control
                   type="text"
                   name="ownerName"
                   value={formData.ownerName}
                   onChange={handleChange}
                   required
                 />
-              </label>
+              </Form.Group>
             </Col>
           </Row>
-          <Row md={12} className="mb-2">
-            <Col>
+          <Row md={12} className="justify-content-center">
+            <Col md={3}>
               {" "}
-              <label>
-                Phone Number:
-                <input
+              <Form.Group>
+                <Form.Label>Phone Number:</Form.Label>
+                <Form.Control
                   type="number"
                   name="phoneNumber"
                   value={formData.phoneNumber}
                   onChange={handleChange}
                   required
                 />
-              </label>
+              </Form.Group>
             </Col>
-            <Col>
+            <Col md={3}>
               {" "}
-              <label>
-                Price Range:
-                <input
+              <Form.Group>
+                <Form.Label>Price Range:</Form.Label>
+                <Form.Control
                   type="text"
                   name="priceRange"
                   value={formData.priceRange}
                   onChange={handleChange}
                   required
                 />
-              </label>
-              <br />
+              </Form.Group>
             </Col>
           </Row>
-          <Row md={12} className="mb-2">
-            <Button type="submit">Submit</Button>
+          <Row md={6} className="justify-content-center mt-3">
+            <Button type="submit" onClick={handleSubmit}>
+              Submit
+            </Button>
           </Row>
-        </form>
+        </Form>
       </Container>
     </Container>
   );
