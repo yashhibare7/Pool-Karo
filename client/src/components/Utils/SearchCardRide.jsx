@@ -1,19 +1,19 @@
 import React from "react";
 import { Card, Button, Row, Col } from "react-bootstrap";
+import { MdDelete } from "react-icons/md";
 import { FaLocationDot } from "react-icons/fa6";
-import { FaLongArrowAltRight} from "react-icons/fa";
-import { IoIosCloseCircle } from "react-icons/io";
+import { FaLongArrowAltRight } from "react-icons/fa";
 import { FaCarSide, FaPhoneAlt, FaRupeeSign, FaEdit } from "react-icons/fa";
 import { SlCalender } from "react-icons/sl";
 import { IoMdTime, IoIosPerson } from "react-icons/io";
 import moment from "moment";
 
-const RideCard = ({ride,onClose}) => {
+const SearchCardRide = (ride, { handleDelete }) => {
   console.log(ride);
   const TripTitle = (ride) => {
     return (
       <span>
-        {ride?.source} <FaLongArrowAltRight /> {ride?.destination}
+        {ride?.ride?.source} <FaLongArrowAltRight /> {ride?.ride?.destination}
       </span>
     );
   };
@@ -22,11 +22,6 @@ const RideCard = ({ride,onClose}) => {
     const date = moment(ride?.ride?.date).format("MMMM Do YYYY");
 
     return <>{date}</>;
-  };
-
-  const handleClose = () => {
-    // Call the onClose prop passed from SearchComponent
-    onClose();
   };
 
   return (
@@ -43,7 +38,7 @@ const RideCard = ({ride,onClose}) => {
                 <IoIosPerson />
               </Col>
               <Col xs={10}>
-                <span>{ride?.ownerName}</span>
+                <span>{ride?.ride?.ownerName}</span>
               </Col>
             </Row>
             <Row>
@@ -51,7 +46,7 @@ const RideCard = ({ride,onClose}) => {
                 <FaCarSide />
               </Col>
               <Col xs={10}>
-                <span>{ride?.vehicleName}</span>
+                <span>{ride?.ride?.vehicleName}</span>
               </Col>
             </Row>
             <Row>
@@ -59,7 +54,7 @@ const RideCard = ({ride,onClose}) => {
                 <FaPhoneAlt />
               </Col>
               <Col xs={10}>
-                <span>{ride?.phoneNumber}</span>
+                <span>{ride?.ride?.phoneNumber}</span>
               </Col>
             </Row>
             <Row>
@@ -67,7 +62,7 @@ const RideCard = ({ride,onClose}) => {
                 <FaRupeeSign />
               </Col>
               <Col xs={10}>
-                <span>{ride?.priceRange}</span>
+                <span>{ride?.ride?.priceRange}</span>
               </Col>
             </Row>
             <Row>
@@ -83,23 +78,9 @@ const RideCard = ({ride,onClose}) => {
                 <IoMdTime />
               </Col>
               <Col xs={10}>
-                <span>{ride?.time}</span>
+                <span>{ride?.ride?.time}</span>
               </Col>
             </Row>
-
-            <Card.Footer>
-            <Row>
-              <Col className="d-flex align-items-center justify-content-center">
-                <Button
-                  variant="danger"
-                  onClick={handleClose}
-                  className="d-flex align-items-center justify-content-center"
-                >
-                  <IoIosCloseCircle />
-                </Button>
-              </Col>
-            </Row>
-          </Card.Footer>
           </Card.Body>
         </Card>
       </div>
@@ -107,4 +88,4 @@ const RideCard = ({ride,onClose}) => {
   );
 };
 
-export default RideCard;
+export default SearchCardRide;

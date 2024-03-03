@@ -35,8 +35,7 @@
   .closeButton {
     background-color: #f44336; /* Red color for the close button, you can change it */
     color: #fff; /* White text color */
-    border: none;
-    padding: 2px 2px;
+    padding: 1px 1px;
     font-size: 14px;
     cursor: pointer;
     border-radius: 4px;
