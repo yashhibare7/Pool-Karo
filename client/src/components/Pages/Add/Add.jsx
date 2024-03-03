@@ -44,10 +44,8 @@ const Add = () => {
     }
   };
   return (
-    <Container>
-      {" "}
+    <div>
       <div className={add.app}>
-        {" "}
         <h1>PoolKaro - Share Your Ride</h1>
       </div>
       <h1></h1>
@@ -170,7 +168,7 @@ const Add = () => {
           </Row>
         </Form>
       </Container>
-    </Container>
+    </div>
   );
 };
 
