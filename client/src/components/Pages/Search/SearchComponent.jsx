@@ -116,6 +116,7 @@ const SearchComponent = ({ rides }) => {
         </button>
   </div>*/}
       <div>
+        <Row xs={1} md={2} lg={3} className="justify-content-center">
         {searchResults.map((ride) => (
           <RideCard
             key={ride._id}
@@ -123,6 +124,7 @@ const SearchComponent = ({ rides }) => {
             onClose={() => handleCloseCard(ride._id)}
           />
         ))}
+        </Row>
       </div>
     </div>
   );
