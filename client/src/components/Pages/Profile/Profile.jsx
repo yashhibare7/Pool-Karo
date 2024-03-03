@@ -21,7 +21,6 @@ const Profile = (isProfile) => {
     }
   }, [isProfile]);
 
-  const handleDelete = (rideId) => {console.log(rideId)};
 
   return (
     <div>
@@ -29,7 +28,7 @@ const Profile = (isProfile) => {
         <h1>My Rides </h1>
       </div>
       <Row xs={1} md={2} lg={3} className="justify-content-center">
-      {rides && rides.map((ride) => <CardRide key={ride._id} ride={ride} handleDelete={handleDelete}/>)}
+      {rides && rides.map((ride) => <CardRide key={ride._id} ride={ride} />)}
       </Row>
     </div>
   );
