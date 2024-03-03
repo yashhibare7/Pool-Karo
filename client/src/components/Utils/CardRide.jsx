@@ -8,9 +8,11 @@ import { SlCalender } from "react-icons/sl";
 import { IoMdTime, IoIosPerson } from "react-icons/io";
 import moment from "moment";
 import DeleteModal from "./DeleteModal";
+import EditModal from "./EditModal/EditModal";
 
 const CardRide = (ride) => {
   const [show, setShow] = useState(false);
+  const [showEditModal, setShowEditModal] = useState(false);
   const [rideId, setrideId] = useState();
   const TripTitle = (ride) => {
     return (
@@ -31,10 +33,29 @@ const CardRide = (ride) => {
     setShow(true);
   };
 
+  const handleEdit = (Id) => {
+    setrideId(Id);
+    setShowEditModal(true);
+  };
+
+  const onUpdate = (rideId, newData) => {
+    // Handle the update logic, e.g., make an API request to update the ride data
+    console.log("Updating ride data:", rideId, newData);
+    // After updating the data, you may want to refresh the component or fetch updated data
+  };
+
   return (
     <>
       {" "}
       {show && <DeleteModal show={show} setShow={setShow} rideId={rideId} />}
+      {showEditModal && (
+        <EditModal
+          show={showEditModal}
+          setShow={setShowEditModal}
+          rideId={rideId}
+          onUpdate={onUpdate}
+        />
+      )}
       <Col sm={4} className="mb-3">
         <div className="mx-4">
           <Card style={{ fontWeight: "bold" }} className="mx-auto mt-5">
@@ -98,6 +119,7 @@ const CardRide = (ride) => {
                   <Button
                     variant="success"
                     className="d-flex align-items-center justify-content-center"
+                    onClick={() => handleEdit(ride?.ride?._id)}
                   >
                     <FaEdit />
                   </Button>
