@@ -1,7 +1,14 @@
+<<<<<<< Updated upstream
 import React, { useState } from "react";
 import axios from "axios";
 import add from "./adds.module.css";
 import { Container, Row, Col, Button, Form, Stack } from "react-bootstrap";
+=======
+import React, { useState } from 'react';
+import axios from 'axios';
+import add from './adds.module.css';
+
+>>>>>>> Stashed changes
 
 const Add = () => {
   const userId = localStorage.getItem("userId");
