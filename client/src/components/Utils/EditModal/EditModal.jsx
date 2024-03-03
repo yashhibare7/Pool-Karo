@@ -14,7 +14,6 @@ const EditModal = ({ show, setShow, rideId, onUpdate }) => {
 
   const handleClose = () => {
     setShow(false);
-    // Clear the form data when the modal is closed
     setNewData({
         source: "",
         destination: "",
