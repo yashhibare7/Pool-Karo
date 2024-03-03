@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Row } from "react-bootstrap";
-import add from "./adds.module.css";
+import profile from "./profile.module.css";
 import CardRide from "../../Utils/CardRide";
 
 import RideCard from "../Search/RideCard";
@@ -25,7 +25,7 @@ const Profile = (isProfile) => {
 
   return (
     <div>
-      <div className={add.app}>
+      <div className={profile.app}>
         <h1>My Rides </h1>
       </div>
       <Row xs={1} md={2} lg={3} className="justify-content-center">
