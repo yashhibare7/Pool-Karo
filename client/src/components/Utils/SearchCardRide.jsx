@@ -1,6 +1,5 @@
 import React from "react";
-import { Card, Button, Row, Col } from "react-bootstrap";
-import { MdDelete } from "react-icons/md";
+import { Card,Row, Col } from "react-bootstrap";
 import { FaLocationDot } from "react-icons/fa6";
 import { FaLongArrowAltRight } from "react-icons/fa";
 import { FaCarSide, FaPhoneAlt, FaRupeeSign, FaEdit } from "react-icons/fa";
