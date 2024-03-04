@@ -77,6 +77,12 @@ const Main = () => {
 
 			<div>
 	           <footer className={main.footer}>
+				{/*<div className="waves">
+					<div className="wave" id="wave1"></div>
+					<div className="wave" id="wave2"></div>
+					<div className="wave" id="wave3"></div>
+					<div className="wave" id="wave4"></div>
+	            </div>*/}
                  <div className={main.footerContent}>
                    <div className={main.footerColumn}>
                      <h4>POOLKARO</h4>
@@ -102,7 +108,7 @@ const Main = () => {
                      <p>You can trust us. We only send promo offers, not a single spam.</p>
                      {/* Add your newsletter subscription form or input field here */}
                    </div>
-                 </div>
+                   </div>
 				 <div className={main.copyright}>
 					<h5> © CopyRight 2024</h5>
 				 </div>

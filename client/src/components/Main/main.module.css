@@ -155,7 +155,7 @@ body {
   /* main.module.css */
 
 .footer {
-    background-color: #00B9F1; /* Adjust background color */
+  background-color: #00B9F1; /* Adjust background color */
     color: #fff; /* Adjust text color */
     padding: 40px 0;
   }
@@ -195,6 +195,45 @@ body {
   .copyright{
     text-align: center;
   }
+
+  /*footer .wave{
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: #ce1818;
+    background: url(./wave.png);
+    background-size: 1000px 100px;
+  }
+
+  footer .wave#wave1{
+    z-index: 1000;
+    opacity: 1;
+    bottom: 0;
+    animation: animateWave 4s linear infinite;
+  }
+
+  footer .wave#wave2{
+    z-index: 1000;
+    opacity: 1;
+    bottom: 0;
+    animation: animateWave 4s linear infinite;
+  }
+
+  footer .wave#wave3{
+    z-index: 1000;
+    opacity: 1;
+    bottom: 0;
+    animation: animateWave 4s linear infinite;
+  }
+
+  footer .wave#wave4{
+    z-index: 1000;
+    opacity: 1;
+    bottom: 0;
+    animation: animateWave 4s linear infinite;
+  }*/
   /* Add styles for newsletter subscription form or input field if needed */
   
   
