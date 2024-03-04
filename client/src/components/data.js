@@ -9,38 +9,38 @@ export const BENEFITS = [
     {
       image: Cost,
       title: 'Cost-Efficiency',
-      description:
-        'Save money by sharing travel expenses with fellow commuters, making transportation more affordable for everyone.',
+      /*description:
+        'Save money by sharing travel expenses with fellow commuters, making transportation more affordable for everyone.',*/
     },
     {
       image: environmental,
       title: 'Environmental Impact',
-      description:
-        'Contribute to a greener planet by reducing the number of individual vehicles on the road, lowering carbon emissions, and promoting sustainable transportation.',
+      /*description:
+        'Contribute to a greener planet by reducing the number of individual vehicles on the road, lowering carbon emissions, and promoting sustainable transportation.',*/
     },
     {
       image: community,
       title: 'Community Building',
-      description:
-        'Forge connections with like-minded individuals who share similar routes or destinations, fostering a sense of community and camaraderie.',
+      /*description:
+        'Forge connections with like-minded individuals who share similar routes or destinations, fostering a sense of community and camaraderie.',*/
     },
     {
       image: safty,
       title: 'Safety and Trust',
-      description:
-        'Slodgen prioritizes safety and trust, providing a reliable platform with user ratings and reviews to build a secure and trustworthy carpooling community.',
+      /*description:
+        'Slodgen prioritizes safety and trust, providing a reliable platform with user ratings and reviews to build a secure and trustworthy carpooling community.',*/
     },
     {
       image: convenience,
       title: 'Convenience',
-      description:
-        'Enjoy a hassle-free commute with Slodgens intuitive platform, effortlessly finding or offering rides that match your schedule and preferences.',
+      /*description:
+        'Enjoy a hassle-free commute with Slodgens intuitive platform, effortlessly finding or offering rides that match your schedule and preferences.',*/
     },
     {
       image: flexible,
       title: 'Flexible Scheduling',
-      description:
-        'Customize your travel plans by choosing the most convenient pick-up and drop-off points, ensuring a flexible and adaptable commuting experience.',
+      /*description:
+        'Customize your travel plans by choosing the most convenient pick-up and drop-off points, ensuring a flexible and adaptable commuting experience.',*/
     },
   ];
 

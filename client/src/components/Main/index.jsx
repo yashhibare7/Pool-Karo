@@ -45,7 +45,7 @@ const Main = () => {
 				<ul>
                     <Benefits 
                       title={BENEFITS[0].title}
-                      description={BENEFITS[0].description}
+                      //description={BENEFITS[0].description}
                       image={BENEFITS[0].image}
                     />
                     <Benefits {...BENEFITS[1]}/>

@@ -21,6 +21,8 @@ body {
     margin-left: 10px;
     margin-top: 15px;
     height: 500px;
+    filter: drop-shadow(10px 7px 10px #00B9F1);
+    margin-bottom: 10px;
 }
 
 .info{
@@ -63,14 +65,17 @@ body {
   /* Benefits section*/
 .benefit_title{
     text-align: center;
+    margin-bottom: 45px;
+    color:  #118bb0;
 }
 
 .benefits {
     padding: 2rem;
     border-radius: 6px;
     width: 100%;
-    background-color:  #00B9F1;
-    box-shadow: 0 2px 8px rgba(78, 74, 74, 0.4);
+    margin-top: 15px;
+    /*background-color:  #00B9F1;*/
+    /*box-shadow: 0 2px 8px  #00B9F1;*/
   }
   
   main h2 {
@@ -90,6 +95,7 @@ body {
     justify-content: center;
     text-align: justify;
   text-justify: inter-word;
+  color:  #00B9F1;
   }
   
   .benefits li {
@@ -101,10 +107,12 @@ body {
     height: 6rem;
     width: 6rem;
     object-fit: cover;
+    filter: drop-shadow(10px 7px 10px #00B9F1);
   }
   
   .benefits li h3 {
     margin: 0.5rem 0;
+    color:  #00B9F1;
   }
   
   .benefits li p {
@@ -115,6 +123,7 @@ body {
 
 .question_title{
     text-align: center;
+    color:#118bb0;
 }
 
 /* main.module.css */
@@ -146,7 +155,7 @@ body {
   /* main.module.css */
 
 .footer {
-    background-color: #666; /* Adjust background color */
+    background-color: #00B9F1; /* Adjust background color */
     color: #fff; /* Adjust text color */
     padding: 40px 0;
   }
