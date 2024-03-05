@@ -1,20 +1,72 @@
-Pool Karo is a web application designed to facilitate the management of pool memberships and activities. It allows users to create accounts, join pools, schedule events, and track expenses. The application is built with a modern and user-friendly interface to enhance the user experience.
+# PoolKaro
 
-Features
-- User authentication: Users can sign up, log in, and log out securely.
-- Pool management: Users can create pools, join existing pools, and manage pool memberships.
-- Event scheduling: Users can schedule events within their pools and view upcoming events.
-- Expense tracking: Users can track expenses related to pool activities and view expense summaries.
+PoolKaro is a web application that allows users to share rides, carpool, and make commuting more efficient.
 
 
-Technologies Used
-- MongoDB: Document database for storing user data, pool information, events, and expenses.
-- Express.js: Web application framework for Node.js used for building the backend API.
-- React.js: JavaScript library for building user interfaces used for creating the frontend.
-- Node.js: JavaScript runtime environment for running server-side code.
-- Mongoose: Object Data Modeling (ODM) library for MongoDB and Node.js used for interacting with MongoDB databases.
-- JWT (JSON Web Tokens): Used for user authentication and authorization.
-- bcrypt.js: Library for hashing passwords before storing them in the database.
-- HTML/CSS: Markup and styling languages for building web pages and styling the user interface.
-- Bootstrap: Frontend framework for building responsive and mobile-first websites.
-- Axios: Promise-based HTTP client for making HTTP requests from the frontend to the backend.
+## Features
+
+- **Share Rides:** Users can create and share ride details including source, destination, date, time, and more.
+
+- **Carpooling:** Facilitates carpooling by connecting users with similar commuting routes.
+
+- **User Authentication:** Secure user authentication and authorization.
+
+- **Profile Management:** Users can manage their profiles, view ride history, and more.
+
+- **Search and Filters:** Enables users to search for available rides and apply filters.
+
+## Getting Started
+
+- Navigate to the project directory: cd client & cd server
+
+- Install dependencies: npm install
+
+- Set up environment variables:
+  Create a .env file in the root directory and add the necessary environment variables.
+   PORT=8080
+   MONGODB_URI=your_mongodb_connection_string
+   JWT_SECRET=your_jwt_secret_key
+
+   Replace your_mongodb_connection_string and your_jwt_secret_key with your MongoDB connection string and a secret key for JWT.
+
+ - Start the application: npm start
+ 
+### Prerequisites
+
+- Node.js and npm installed on your machine.
+- MongoDB installed and running.
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/yashhibare7/PoolKaro.git
+
+### Usage
+User Registration:
+
+Register as a new user by providing the required information.
+Login:
+
+Log in using your registered email and password.
+Share a Ride:
+
+Create a new ride by providing details such as source, destination, date, and time.
+Search for Rides:
+
+Use the search functionality to find rides based on your commuting needs.
+Carpooling:
+
+Connect with other users offering rides on similar routes.
+
+### Technologies
+- Frontend:
+   React.js
+   HTML5, CSS3, JavaScript
+- Backend:
+   Node.js
+   Express.js
+   MongoDB
+- Authentication:
+   JSON Web Tokens (JWT)
