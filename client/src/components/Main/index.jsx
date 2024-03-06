@@ -9,7 +9,6 @@ import Question from "./Question/Questions";
 
 const Main = () => {
 
-
 	return (
 		<div className={main.main_page}>
 			<nav>
