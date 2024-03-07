@@ -15,7 +15,6 @@ const Main = () => {
 				<Navbar/>
 			</nav>
 			<div className={main.container}>
-
 				<div className={main.left_part}>
 				<img className={main.img} src={car} alt="logo"/>
 				</div>
