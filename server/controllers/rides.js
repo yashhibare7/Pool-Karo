@@ -42,6 +42,7 @@ const getRideController = async (req, res) => {
     res.status(500).json({ message: "Server error" });
   }
 };
+
 const getAllRideController = async (req, res) => {
   try {
     const rides = await Ride.find();
