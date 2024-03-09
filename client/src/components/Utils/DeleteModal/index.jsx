@@ -3,6 +3,7 @@ import Modal from "react-bootstrap/Modal";
 import axios from "axios";
 
 function DeleteModal({ show, setShow, rideId }) {
+  
   const handleClose = () => {
     setShow(false);
   };
