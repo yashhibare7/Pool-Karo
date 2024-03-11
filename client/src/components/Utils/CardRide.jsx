@@ -38,11 +38,6 @@ const CardRide = (ride) => {
     setShowEditModal(true);
   };
 
-  const onUpdate = (rideId, newData) => {
-    // Handle the update logic, e.g., make an API request to update the ride data
-    console.log("Updating ride data:", rideId, newData);
-    // After updating the data, you may want to refresh the component or fetch updated data
-  };
 
   return (
     <>
@@ -53,7 +48,6 @@ const CardRide = (ride) => {
           show={showEditModal}
           setShow={setShowEditModal}
           rideId={rideId}
-          onUpdate={onUpdate}
         />
       )}
       <Col sm={4} className="mb-3">
