@@ -17,8 +17,10 @@ function App() {
       <Route path="/signup" exact element={<Signup />} />
       <Route path="/login" exact element={<Login />} />
       <Route path="/" element={<Navigate replace to="/login" />} />
-      <Route path="/Profile" element={<ProfileComponent />} />
-      <Route path="/search" element={<Search />} />
+      {user && <Route path="/Profile" element={<ProfileComponent />} />}
+      {user && <Route path="/search" element={<Search />} />}
+      <Route path="/Profile" element={<Navigate replace to="/login" />} />
+      <Route path="/search" element={<Navigate replace to="/login" />} />
     </Routes>
   );
 }
