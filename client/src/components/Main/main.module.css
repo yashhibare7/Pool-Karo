@@ -196,44 +196,42 @@ body {
     text-align: center;
   }
 
-  /*footer .wave{
-    position: absolute;
-    top: -100px;
-    left: 0;
-    width: 100%;
-    height: 100px;
-    background: #ce1818;
-    background: url(./wave.png);
-    background-size: 1000px 100px;
-  }
+  @media (max-width: 600px) {
+    .container {
+        flex-direction: column;
+        align-items: stretch;
+    }
 
-  footer .wave#wave1{
-    z-index: 1000;
-    opacity: 1;
-    bottom: 0;
-    animation: animateWave 4s linear infinite;
-  }
+    .left_part,
+    .right_part {
+        flex: 0 0 100%;
+    }
 
-  footer .wave#wave2{
-    z-index: 1000;
-    opacity: 1;
-    bottom: 0;
-    animation: animateWave 4s linear infinite;
-  }
+    .img {
+        width: 100%;
+        height: auto;
+    }
 
-  footer .wave#wave3{
-    z-index: 1000;
-    opacity: 1;
-    bottom: 0;
-    animation: animateWave 4s linear infinite;
-  }
+    .info {
+        flex-direction: column;
+        align-items: center;
+    }
 
-  footer .wave#wave4{
-    z-index: 1000;
-    opacity: 1;
-    bottom: 0;
-    animation: animateWave 4s linear infinite;
-  }*/
-  /* Add styles for newsletter subscription form or input field if needed */
+    .white_btn {
+        margin: 20px 0;
+    }
+
+    .benefits li {
+        width: 100%;
+    }
+
+    .benefits li img {
+        width: 100%;
+    }
+
+    .footerColumn {
+        flex: 0 0 100%;
+    }
+}
   
   
