@@ -6,6 +6,7 @@ import { FaLongArrowAltRight } from "react-icons/fa";
 import { FaCarSide, FaPhoneAlt, FaRupeeSign, FaEdit } from "react-icons/fa";
 import { SlCalender } from "react-icons/sl";
 import { IoMdTime, IoIosPerson } from "react-icons/io";
+import { Link } from "react-router-dom";
 import moment from "moment";
 import DeleteModal from "./DeleteModal";
 import EditModal from "./EditModal/EditModal";
@@ -33,8 +34,7 @@ const CardRide = (ride) => {
     setShow(true);
   };
 
-  const handleEdit = (Id) => {
-    setrideId(Id);
+  const handleEdit = () => {
     setShowEditModal(true);
   };
 
@@ -47,7 +47,8 @@ const CardRide = (ride) => {
         <EditModal
           show={showEditModal}
           setShow={setShowEditModal}
-          rideId={rideId}
+          rideId={ride._id}
+         
         />
       )}
       <Col sm={4} className="mb-3">

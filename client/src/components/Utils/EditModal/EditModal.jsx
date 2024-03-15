@@ -4,17 +4,17 @@ import { Modal, Button, Form } from "react-bootstrap";
 
 const EditModal = ({ show, setShow, rideId, onUpdate }) => {
   const [newData, setNewData] = useState({
-    id: rideId,
     source: "",
     destination: "",
     date: "",
     time: "",
     vehicleName: "",
     ownerName: "",
+    phoneNumber: "",
     priceRange: "",
   });
 
-  const handleClose = () => {
+  /*const handleClose = () => {
     setShow(false);
     setNewData({
         id: rideId,
@@ -26,25 +26,29 @@ const EditModal = ({ show, setShow, rideId, onUpdate }) => {
         ownerName: "",
         priceRange: "",
     });
-  };
+  };*/
 
   useEffect(() => {
-    axios.get(`http://localhost:8080/api/get-all-rides/${rideId}`)
-    .then(res => {
-      setNewData({...newData, source: res.data.source,destination: res.data.destination,date: res.data.date,time: res.data.time,vehicleName: res.data.vehicleName,ownerName: res.data.ownerName,priceRange: res.data.priceRange})
-    })
-    .catch(err => console.log(err))
-  }, []);
+    if (show) {
+      axios.get(`http://localhost:8080/api/get-ride/${rideId}`)
+        .then(res => {
+          setNewData(res.data);
+        })
+        .catch(err => console.log(err));
+    }
+  }, [show, rideId]);
 
   const handleUpdate = () => {
-    // Call the onUpdate function passed from CardRide
-    onUpdate(rideId, newData);
-    // Close the modal
-    handleClose();
+    axios.put(`http://localhost:8080/api/edit-ride/${rideId}`, newData)
+      .then(res => {
+        onUpdate(rideId, newData);
+        setShow(false);
+      })
+      .catch(err => console.log(err));
   };
 
   return (
-    <Modal show={show} onHide={handleClose} centered>
+    <Modal show={show} onClick={() => setShow(false)} centered>
       <Modal.Header closeButton>
         <Modal.Title>Edit Ride</Modal.Title>
       </Modal.Header>
@@ -56,8 +60,8 @@ const EditModal = ({ show, setShow, rideId, onUpdate }) => {
             <Form.Control
               type="text"
               placeholder="Enter Source"
-              name="Source"
               value={newData.source}
+              onChange={e => setNewData({ ...newData, source: e.target.value })}
             />
           </Form.Group>
           <Form.Group controlId="formDestination">
@@ -65,8 +69,8 @@ const EditModal = ({ show, setShow, rideId, onUpdate }) => {
             <Form.Control
               type="text"
               placeholder="Enter Destination"
-              name="Destination"
               value={newData.destination}
+              onChange={e => setNewData({ ...newData, destination: e.target.value })}
             />
           </Form.Group>
           <Form.Group controlId="formDate">
@@ -74,8 +78,8 @@ const EditModal = ({ show, setShow, rideId, onUpdate }) => {
             <Form.Control
               type="date"
               placeholder="Enter Date"
-              name="Date"
               value={newData.date}
+              onChange={e => setNewData({ ...newData, date: e.target.value })}
             />
           </Form.Group>
           <Form.Group controlId="formTime">
@@ -83,8 +87,8 @@ const EditModal = ({ show, setShow, rideId, onUpdate }) => {
             <Form.Control
               type="time"
               placeholder="Enter Time"
-              name="Time"
               value={newData.time}
+              onChange={e => setNewData({ ...newData, time: e.target.value })}
             />
           </Form.Group>
           <Form.Group controlId="formVehicleName">
@@ -92,8 +96,8 @@ const EditModal = ({ show, setShow, rideId, onUpdate }) => {
             <Form.Control
               type="text"
               placeholder="Enter vehicle name"
-              name="vehicleName"
               value={newData.vehicleName}
+              onChange={e => setNewData({ ...newData, vehicleName: e.target.value })}
             />
           </Form.Group>
           <Form.Group controlId="formOwnerName">
@@ -101,10 +105,18 @@ const EditModal = ({ show, setShow, rideId, onUpdate }) => {
             <Form.Control
               type="text"
               placeholder="Enter owner name"
-              name="ownerName"
               value={newData.ownerName}
+              onChange={e => setNewData({ ...newData, ownerName: e.target.value })}
             />
           </Form.Group>
+          <Form.Group controlId="formPhoneNumber">
+            <Form.Label>Phone Number</Form.Label>
+            <Form.Control
+              type="text"
+              placeholder="Enter phone number"
+              value={newData.phoneNumber}
+              onChange={e => setNewData({ ...newData, phoneNumber: e.target.value })}
+            /></Form.Group>
           <Form.Group controlId="formPriceRange">
             <Form.Label>Price Range</Form.Label>
             <Form.Control
@@ -112,6 +124,7 @@ const EditModal = ({ show, setShow, rideId, onUpdate }) => {
               placeholder="Enter Price Range"
               name="Price Range"
               value={newData.priceRange}
+              onChange={e => setNewData({ ...newData, priceRange: e.target.value })}
             />
           </Form.Group>
           {/* Add other form fields as needed */}
@@ -121,7 +134,7 @@ const EditModal = ({ show, setShow, rideId, onUpdate }) => {
         <Button variant="primary" onClick={handleUpdate}>
           Update
         </Button>
-        <Button variant="secondary" onClick={handleClose}>
+        <Button variant="secondary" onClick={() => setShow(false)}>
           Cancel
         </Button>
       </Modal.Footer>

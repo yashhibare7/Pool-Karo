@@ -82,10 +82,34 @@ const deleteRidebyId = async (req, res) => {
   }
 };
 
+const editRideController = async (req, res) => {
+  const { source, destination, date, time, vehicleName, ownerName, phoneNumber, priceRange } = req.body;
+  const { id } = req.params;
+
+  try {
+    const updatedRide = await Ride.findByIdAndUpdate(id, {
+      source,
+      destination,
+      date,
+      time,
+      vehicleName,
+      ownerName,
+      phoneNumber,
+      priceRange
+    }, { new: true });
+
+    res.json(updatedRide);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: "Server error" });
+  }
+};
+
 module.exports = {
   addRideController,
   getRideController,
   getAllRideController,
   getRidebyUser,
-  deleteRidebyId
+  deleteRidebyId,
+  editRideController,
 };

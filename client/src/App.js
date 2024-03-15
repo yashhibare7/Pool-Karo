@@ -2,7 +2,7 @@ import { Route, Routes, Navigate } from "react-router-dom";
 import Main from "./components/Main";
 import Signup from "./components/Singup";
 import Login from "./components/Login";
-
+import EditModal from "./components/Utils/EditModal/EditModal";
 import Search from "./components/Pages/Search/Search";
 import ProfileComponent from "./components/Pages/Profile";
 
@@ -21,6 +21,7 @@ function App() {
       {user && <Route path="/search" element={<Search />} />}
       <Route path="/Profile" element={<Navigate replace to="/login" />} />
       <Route path="/search" element={<Navigate replace to="/login" />} />
+      <Route path="/edit/:id" exact element={<EditModal/>}/>
     </Routes>
   );
 }
