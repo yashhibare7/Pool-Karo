@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import Navbar from "../../Navbar/Navbar";
 import Add from "../Add/Add";
-import Profile from "./Profile";
+import Profile from "./profile";
 const ProfileComponent = () => {
   const [addRide, setAddride] = useState(false);
 

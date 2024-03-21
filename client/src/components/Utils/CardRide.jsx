@@ -15,6 +15,7 @@ const CardRide = (ride) => {
   const [show, setShow] = useState(false);
   const [showEditModal, setShowEditModal] = useState(false);
   const [rideId, setrideId] = useState();
+  
   const TripTitle = (ride) => {
     return (
       <span>
@@ -34,7 +35,8 @@ const CardRide = (ride) => {
     setShow(true);
   };
 
-  const handleEdit = () => {
+  const handleEdit = (Id) => {
+    setrideId(Id);
     setShowEditModal(true);
   };
 
@@ -47,8 +49,7 @@ const CardRide = (ride) => {
         <EditModal
           show={showEditModal}
           setShow={setShowEditModal}
-          rideId={ride._id}
-         
+          rideId={rideId}
         />
       )}
       <Col sm={4} className="mb-3">

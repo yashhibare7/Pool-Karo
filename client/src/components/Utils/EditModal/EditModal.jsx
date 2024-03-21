@@ -2,7 +2,9 @@ import axios from "axios";
 import React, { useState, useEffect} from "react";
 import { Modal, Button, Form } from "react-bootstrap";
 
-const EditModal = ({ show, setShow, rideId, onUpdate }) => {
+const   EditModal = ({ show, setShow, rideId,  }) => {
+  
+  const [existingData, setexistingData]=useState({})
   const [newData, setNewData] = useState({
     source: "",
     destination: "",
@@ -14,41 +16,31 @@ const EditModal = ({ show, setShow, rideId, onUpdate }) => {
     priceRange: "",
   });
 
-  /*const handleClose = () => {
-    setShow(false);
-    setNewData({
-        id: rideId,
-        source: "",
-        destination: "",
-        date: "",
-        time: "",
-        vehicleName: "",
-        ownerName: "",
-        priceRange: "",
-    });
-  };*/
+
 
   useEffect(() => {
     if (show) {
-      axios.get(`http://localhost:8080/api/get-ride/${rideId}`)
+     axios.get(`http://localhost:8080/api/get-ride/${rideId}`)
         .then(res => {
-          setNewData(res.data);
+          setexistingData(res.data);
         })
         .catch(err => console.log(err));
     }
   }, [show, rideId]);
+  useEffect(() => {
+    setNewData(existingData); // Update newData when existingData changes
+  }, [existingData]);
 
   const handleUpdate = () => {
     axios.put(`http://localhost:8080/api/edit-ride/${rideId}`, newData)
       .then(res => {
-        onUpdate(rideId, newData);
         setShow(false);
       })
       .catch(err => console.log(err));
   };
 
   return (
-    <Modal show={show} onClick={() => setShow(false)} centered>
+    <Modal show={show} centered>
       <Modal.Header closeButton>
         <Modal.Title>Edit Ride</Modal.Title>
       </Modal.Header>
@@ -61,7 +53,7 @@ const EditModal = ({ show, setShow, rideId, onUpdate }) => {
               type="text"
               placeholder="Enter Source"
               value={newData.source}
-              onChange={e => setNewData({ ...newData, source: e.target.value })}
+              onChange={(e) => setNewData({ ...newData, source: e.target.value })}
             />
           </Form.Group>
           <Form.Group controlId="formDestination">

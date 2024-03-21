@@ -1,5 +1,6 @@
 const Ride = require("../models/Ride");
 
+
 const addRideController = async (req, res) => {
   const {
     source,
@@ -35,7 +36,8 @@ const addRideController = async (req, res) => {
 
 const getRideController = async (req, res) => {
   try {
-    const rides = await Ride.find();
+    const ride_id = req.params.id;
+    const rides = await Ride.findById({_id:ride_id});
     res.json(rides);
   } catch (error) {
     console.error(error);

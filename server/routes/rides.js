@@ -13,9 +13,6 @@ const router = express.Router();
 // Add a ride
 router.post("/add-ride", addRideController);
 
-// Get all rides
-router.get("/get-rides", getRideController);
-
 // Get ride by ID
 router.get("/get-ride/:id", getRideController);
 
